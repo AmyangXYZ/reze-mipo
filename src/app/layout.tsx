@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/next"
+import { SiteNotice } from "@/components/site-notice"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { NoStickyFocus } from "@/components/no-sticky-focus"
 import { NoNativeContextMenu } from "@/components/no-native-context-menu"
@@ -42,6 +43,7 @@ export default function RootLayout({
         <NoStickyFocus />
         <NoNativeContextMenu />
         <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
+        <SiteNotice />
       </body>
       <Analytics />
     </html>
